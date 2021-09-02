@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>WEB01_jabaScript</title>
+<style>
+  .hm{
+    font-weight: bold;
+    color: red;
+  }
+  #first{
+    color: blue;
+  }
+  span{
+    color: green;
+  }
+
+</style>
+  </head>
+<body>
+<h1><a href="index.HTML"> WEB </a> </h1>
+<input type="button" value="afternoon" onclick="
+document.body.style.backgroundColor='green';
+document.querySelector('body').style.color='white';">
+<input type="button" value="night" onclick="
+document.querySelector('body').style.backgroundColor='black';
+document.querySelector('body').style.color='white';">
+<input type="button" value="day"onclick="
+document.querySelector('body').style.backgroundColor='white';
+document.querySelector('body').style.color='black';">
+
+<div id="grid">
+<ol>
+<li><a href="1.html">HTML이란?</a></li>
+<li><a href="2.html">CSS란 ?</a></li>
+<li><a href="3.html">JabaScript란?</a></li>
+</ol>
+<div id="article">
+<h2 style="background-color:green; color:black;">JabaScript란</h2>
+<p>
+<h1>JavaScript</h1>
+<div style="font-weight:bold;">JavaScript</div>
+<span style="font-weight:bold;">JavaScript</span>는 웹을 위한 인터프리터 언어이자 객체기반의
+스크립트 프로그래밍 언어 이며<span id="first" class="hm">HTML</span>의 특정 요소 (들)을 선택하여 다양한 이벤트
+ (마우스 클릭, 키보드 입력 등)에 따라 어떤 동작을 하도록 기능을 넣을 수 있으며
+ 발생하는 이벤트에 따라 <span class="hm">HTML</span>, <span>CSS</span>를 조작할수도 있고 그 외에도 여러가지를 할 수 있다.
+</p>
+</div>
+</div>
+</body>
+</html>

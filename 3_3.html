@@ -5,12 +5,43 @@
     <title>WEB01_jabaScript</title>
     <link rel="stylesheet" href="style.css">
 
-    <script src="colors.js"></script>
+    <script>
+    function LinksSetColor(color){
+      var alist = document.querySelectorAll('a');
+      var i = 0;
+      while (i<alist.length){
+        alist[i].style.color = color;
+      i = i + 1;}
+    }
+    function BodySetColor(color){
+      document.querySelector('body').style.color = color;
+    }
+    function BodySetBackgroundColor(color){
+      document.querySelector('body').style.backgroundColor = color;
+    }
+    function nightDayHandler(self){
+        var target = document.querySelector('body');
+        if ( self.value === 'night'){
+          target.style.backgroundColor='black';
+          target.style.color='white';
+          self.value='day';
+          LinksSetColor('powderblue');
+      }
+        else{
+          target.style.backgroundColor='white';
+          target.style.color='black';
+          self.value='night';
+          LinksSetColor('blue');
+      }
+      }
+    </script>
 
 <body>
 <h1><a href="index.HTML">WEB</a></h1>
+
   <input id="night_day" type="button" value="night" onclick="
   nightDayHandler(this);">
+
 <div id="grid">
 <ol>
 <li><a href="1.html">HTML이란?</a></li>

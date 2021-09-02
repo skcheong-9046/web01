@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>WEB01_jabaScript</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+    function LinksSetColor(color){
+      var alist = document.querySelectorAll('a');
+      var i = 0;
+      while (i<alist.length){
+        alist[i].style.color = color;
+      i = i + 1;}
+    }
+    function BodySetColor(color){
+      document.querySelector('body').style.color = color;
+    }
+    function BodySetBackgroundColor(color){
+      document.querySelector('body').style.backgroundColor=color;
+    }
+    function nightDayHandler(self){
+        var target = document.querySelector('body');
+        if ( self.value === 'night'){
+        Body.SetBackgroundColor('black');
+        Body.SetColor('white');
+        self.value='day';
+        Links.setColor('powderblue');
+      }
+        else{
+          BodysetBackgroundColor('white');
+          BodysetColor('black');
+        self.value='night';
+        Links.setColor('blue');
+      }
+      }
+    </script>
+  </head>
+<body>
+<h1><a href="index.HTML"> WEB </a></h1>
+<input type="button" value="night" onclick="
+document.querySelector('body').style.backgroundColor='black';
+document.querySelector('body').style.color='white';">
+<input type="button" value="day"onclick="
+document.querySelector('body').style.backgroundColor='white';
+document.querySelector('body').style.color='black';">
+
+<input id="night_day" type="button" value="night" onclick="
+if(document.querySelector('#night_day'),value ==='night')
+{
+BodySetBackgroundColor('black');
+BodySetColor('white');
+document.querySelector('#night_day').value='day';
+}
+else{
+BodySetBackgroundColor('white');
+Body.setColor('black');
+document.querySelector('#night_day').value='night';
+} ">
+
+<div id="grid">
+<ol>
+<li><a href="1.html">HTML이란?</a></li>
+<li><a href="2.html">CSS란 ?</a></li>
+<li><a href="3.html">JabaScript란?</a></li>
+</ol>
+<div id="article">
+<h2>JabaScript란</h2>
+<p>
+  <input id="night_day" type="button" value="night" onclick="
+  if(this.value === 'night')
+  {
+  document.querySelector('body').style.backgroundColor='black';
+  document.querySelector('body').style.color='white';
+  this.value='day';
+  }
+  else{
+  document.querySelector('body').style.backgroundColor='white';
+  document.querySelector('body').style.color='black';
+  this.value='night';
+  } ">
+JavaScript는 웹을 위한 인터프리터 언어이자 객체기반의 스크립트 프로그래밍 언어 이며
+HTML의 특정 요소 (들)을 선택하여 다양한 이벤트 (마우스 클릭, 키보드 입력 등)에 따라
+어떤 동작을 하도록 기능을 넣을 수 있으며 발생하는 이벤트에 따라 HTML, CSS를 조작할
+수도 있고 그 외에도 여러가지를 할 수 있다.
+<input id="night_day" type="button" value="night" onclick="
+  nightDayHandler(this);">
+<input id="night_day" type="button" value="night" onclick="
+  nightDayHandler(this);">
+</p>
+</div>
+</div>
+</body>
+</html>
